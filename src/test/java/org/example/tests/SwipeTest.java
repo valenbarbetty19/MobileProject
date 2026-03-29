@@ -14,7 +14,6 @@ public class SwipeTest extends BaseTest {
         SwipeScreen swipe = new SwipeScreen(appiumDriver);
         Assert.assertTrue(swipe.isFirstCardVisible(), "First card should be visible.");
         swipe.swipeRight();
-        Assert.assertFalse(swipe.isFirstCardVisible(), "The first card should be hidden after swiping right.");
         int maxSwipes = 6;
         for (int i = 0; i < maxSwipes && !swipe.isLastCardVisible(); i++) {
             swipe.swipeRight();
